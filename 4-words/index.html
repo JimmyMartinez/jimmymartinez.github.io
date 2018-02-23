@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>PassPhrase</title>
+	<meta name="description" content="A simple tool for generating a mnemonic passphrase. Easy to generate, easy to remember.">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link href="../css/frinostyle.min.css" rel="stylesheet">
+	<link href="../css/simple-grid.css" rel="stylesheet">
+	<link href="../css/style-dark-theme.css" rel="stylesheet">
+	<link rel="shortcut icon" href="../img/favicon.ico">
+	<script src="../js/english-wordlist.js"></script> <!-- BIP39 English wordlist from https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt -->
+	<script src="../js/4-words.js"></script>
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="../img/logo.svg">
+		</div>
+	</header>
+	<a href="../4-words"><div class="four-button selected" title="4 words"></div></a>
+	<a href="../6-words"><div class="six-button" title="6 words"></div></a>
+	<a href="../8-words"><div class="eight-button" title="8 words"></div></a>
+	<a href="../12-words"><div class="twelve-button" title="12 words"></div></a>
+	<a href="../light/4-words">
+		<div class="day-night-button" title="Dark/Light Theme">
+			<span class="F-CONTRAST"></span>
+		</div>
+	</a>
+	<div class="reload-button" onclick="reloadPage()">
+		<span class="F-REFRESH" title="Generate a new passphrase"></span>
+	</div>
+	<div class="copy-button js-textareacopybtn">
+		<span class="F-COPY" title="Copy to clipboard"></span>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="textarea-wrap">
+					<textarea id="passphraseTextarea" readonly class="js-copytextarea"></textarea>
+					<div id="copy"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Version -->
+	<div class="version"></div>
+	
+<!-- JS copy function -->
+<script>
+	var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
+	copyTextareaBtn.addEventListener('click', function(event) {
+		var copyTextarea = document.querySelector('.js-copytextarea');
+		copyTextarea.select();
+			try {
+				var successful = document.execCommand('copy');
+				var msg = successful ? 'successful' : 'unsuccessful';
+				console.log('Copying text command was ' + msg);
+			} catch (err) {
+				console.log('Oops, unable to copy');
+			}
+		document.getElementById("copy").style.visibility = 'visible';
+		document.getElementById("copy").style.opacity = '1';
+		setTimeout(function() {document.getElementById("copy").style.opacity = '0';}, 1500);
+		setTimeout(function() {document.getElementById("copy").style.visibility = 'hidden';}, 1500);
+	});
+</script>
+
+<!-- Reload -->
+<script>
+	function reloadPage()
+		{
+			location.reload();
+		}
+</script>
+</body>
+</html>
