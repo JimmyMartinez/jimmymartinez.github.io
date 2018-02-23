@@ -33,7 +33,7 @@ header .logo img {
 /* Four Button */
 
 .four-button {
-	position: absolute;
+	position: fixed;
 	bottom: 30px;
 	left: 30px;
 	width: 50px;
@@ -59,7 +59,7 @@ header .logo img {
 /* Six Button */
 
 .six-button {
-	position: absolute;
+	position: fixed;
 	bottom: 90px;
 	left: 30px;
 	width: 50px;
