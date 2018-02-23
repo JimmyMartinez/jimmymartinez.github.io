@@ -1,0 +1,286 @@
+body {
+	background: #f0f0f0;
+}
+
+::selection {
+background: #cfcfcf; /* Safari */
+}
+::-moz-selection {
+background: #cfcfcf; /* Firefox */
+}
+
+/* Header */
+
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80px;
+	z-index: 1000000;
+}
+header .logo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin-top: 2px;
+}
+header .logo img {
+	width: 240px;
+}
+
+/* Four Button */
+
+.four-button {
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	color: #e6e6e6;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.four-button:hover {
+	background: #444;
+}
+.four-button::before {
+	content: '4';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+/* Six Button */
+
+.six-button {
+	position: absolute;
+	bottom: 90px;
+	left: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	color: #e6e6e6;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.six-button:hover {
+	background: #444;
+}
+.six-button::before {
+	content: '6';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+/* Eight Button */
+
+.eight-button {
+	position: absolute;
+	bottom: 150px;
+	left: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	color: #e6e6e6;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.eight-button:hover {
+	background: #444;
+}
+.eight-button::before {
+	content: '8';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+/* Twelve Button */
+
+.twelve-button {
+	position: absolute;
+	bottom: 210px;
+	left: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	color: #e6e6e6;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.twelve-button:hover {
+	background: #444;
+}
+.twelve-button::before {
+	content: '12';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.8rem;
+	font-weight: 300;
+}
+
+/* Selected Button */
+
+.selected {
+	background: #444;
+}
+
+/* Day-Night mode */
+
+.day-night-button {
+	position: absolute;
+	bottom: 30px;
+	left: 90px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.day-night-button:hover {
+	background: #444;
+}
+.day-night-button img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 27px;
+}
+
+/* Reload Button */
+
+.reload-button {
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.reload-button:hover {
+	background: #444;
+}
+.reload-button img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 27px;
+}
+
+/* Copy Button */
+
+.copy-button {
+	position: absolute;
+	bottom: 90px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	background: #999;
+	border-radius: 6px;
+	z-index: 100;
+	cursor: pointer;
+}
+.copy-button:hover {
+	background: #444;
+}
+.copy-button img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 29px;
+}
+
+/* Textarea */
+
+.textarea-wrap {
+	position: relative;
+	height: auto;
+	margin-top: 200px;
+}
+textarea {
+	width: 100%;
+	height: 250px;
+	font-size: 2.5rem;
+	color: #444;
+	border: 0 none;
+	background: #f0f0f0;
+	resize: none;
+	text-align: center;
+	overflow: hidden;
+	font-weight: 300;
+	line-height: 1.4;
+	outline: none;
+}
+
+/* Copy Alert */
+
+#copy {
+	position: absolute;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%,0);
+	background: #444;
+	padding: 5px 15px;
+	z-index: 50;
+	visibility: hidden;
+	transition: 0.5s;
+	opacity: 0;
+	border-radius: 6px;
+}
+#copy::before {
+	content: 'Coppied';
+	color: #fff;
+	font-size: 0.8rem;
+	line-height: 1.5rem;
+	font-weight: 700;
+}
+
+/* Version */
+
+.version {
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,0);
+	width: 50px;
+	height: 25px;
+	background: #444;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+.version::before {
+	content: "v1.3";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: rgba(255,255,255,0.6);
+	font-size: 0.8rem;
+	font-weight: 400;
+}
